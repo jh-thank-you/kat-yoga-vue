@@ -1,0 +1,909 @@
+@import "./base.css";
+
+.app-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: block;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#app {
+  font-weight: normal;
+
+  max-width: 1400px;
+  margin: 0 auto;
+  /*padding: 2rem;*/
+}
+
+a,
+.green {
+  transition: 0.4s;
+  text-decoration: none;
+
+  color: var(--nav-btn-text);
+  border-bottom: 3px solid transparent;
+}
+
+@media (hover: hover) {
+  a:hover {
+    border-color: var(--nav-btn-text-hover);
+  }
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* for some reason <b> and <strong> tags are not 
+ working with v-html or v-t in the vue template
+ only a <spam> tag with a CSS class of bold worked */
+.bold {
+  font-weight: bold;
+}
+
+.paragraph-link {
+  transition: 0.4s;
+  text-decoration: none;
+
+  color: var(--color-text);
+  border-bottom: 2px solid transparent;
+}
+
+.paragraph-link:hover {
+  border-color: var(--color-text-hover);
+}
+
+@media (min-width: 1024px) {
+  #app {
+    /*    display: grid;
+    grid-template-columns: 1fr 1fr;*/
+    padding: 0 6rem;
+  }
+}
+
+/* ********** Page Route Views ********** */
+
+.router-view {
+  margin-top: 65px;
+}
+
+.about,
+.instructor,
+.home,
+.classes,
+.contact {
+  /*  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: left;*/
+  position: fixed;
+  display: block;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  border: 1px solid orange;
+  margin: auto;
+  /*border: 1px solid orange;*/
+  padding-top: 85px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  min-height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 80px;
+  background-image: url(/img/img-seamless-texture-gray-green-light-extra.png);
+  background-repeat: repeat;
+
+  clip-path: inset(0 0 0 0);
+}
+
+.about {
+  background-color: lightseagreen;
+}
+
+.instructor {
+  background-color: indianred;
+}
+
+.home {
+  background-color: mediumpurple;
+}
+
+.classes {
+  background-color: steelblue;
+}
+
+.contact {
+  background-color: mediumvioletred;
+}
+
+.main-content-wrapper {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  max-width: 800px;
+  height: 100%;
+  min-height: 100vh;
+}
+
+@media (min-width: 1400px) {
+  .about,
+  .classes,
+  .contact,
+  .home,
+  .instructor {
+    width: 100%;
+    max-width: 1400px;
+    /*CSS Comb will hang on the calc statement*/
+    margin-left: calc(((100vw - 1400px) * 0.5));
+    margin-right: 0;
+  }
+}
+
+.instructor {
+  background-image: url(/img/img-seamless-texture-gray-yellow-light-extra.png);
+}
+
+.home {
+  background-color: #663969;
+}
+
+.classes {
+  background-image: url(/img/img-seamless-texture-gray-blue-light-extra.png);
+}
+
+.contact {
+  background-image: url(/img/img-seamless-texture-gray-red-light-extra.jpg);
+}
+
+.row {
+  display: block;
+
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  /*border: 1px solid hotpink;*/
+}
+
+.row:first-of-type {
+  margin-top: 85px;
+  padding-top: 5px;
+}
+
+.main-content-wrapper {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 100vh;
+}
+.main-content {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  max-width: 1400px;
+  /*min-height: calc(100vh - 255px);*/
+  min-height: 65vh;
+  margin: 0 auto;
+
+  background-image: url(/img/img-seamless-texture-gray-yellow-light-extra.png);
+  background-repeat: repeat;
+  z-index: 2;
+
+  /*border: 5px solid hotpink;*/
+}
+
+#main-content-wrapper-bkg-img-pattern {
+  position: fixed;
+  top: 68px;
+  width: 100%;
+  max-width: 1400px;
+  height: calc(100% - 68px);
+  background-image: url(/img/img-yoga-mandala-seamless-50-opacity-gray.png);
+  background-repeat: repeat;
+  background-size: 150%;
+  background-position: center center;
+  z-index: -1;
+}
+
+.about .main-content-wrapper .main-content {
+  background-image: url(/img/img-seamless-texture-gray-green-light-extra.png);
+}
+
+.instructor .main-content-wrapper .main-content {
+  background-image: url(/img/img-seamless-texture-gray-yellow-light-extra.png);
+}
+
+.classes .main-content-wrapper .main-content {
+  background-image: url(/img/img-seamless-texture-gray-blue-light-extra.png);
+}
+
+.contact .main-content-wrapper .main-content {
+  background-image: url(/img/img-seamless-texture-gray-red-light-extra.png);
+}
+
+.img-section {
+  display: inline-block;
+
+  width: 30%;
+  max-width: 300px;
+  margin: 0 0 15px 0;
+
+  vertical-align: top;
+
+  /*border: 1px solid red;*/
+}
+
+.image-block div.img-section {
+  display: inline-block;
+
+  width: 48%;
+  /*border: 3px solid lightseagreen;*/
+}
+
+div.img-section img,
+div.img-section span {
+  display: block;
+
+  width: 100%;
+}
+div.img-section img {
+  margin-bottom: 5px;
+}
+
+div.img-section span {
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+
+  color: rgba(77, 57, 37, 0.75);
+  background-color: rgba(77, 57, 37, 0.15);
+}
+
+div.img-section span:first-of-type {
+  font-weight: bold;
+
+  padding-top: 5px;
+
+  border-radius: 5px 5px 0 0;
+}
+
+div.img-section span:last-of-type {
+  padding-bottom: 10px;
+  border-radius: 0 0 5px 5px;
+}
+
+.image-block div.img-section:after {
+  padding-bottom: 0;
+}
+
+.img-section:after {
+  display: block;
+
+  padding-bottom: 100%;
+
+  content: "";
+  /*border: 1px solid magenta;*/
+}
+
+.margin-rt {
+  margin-right: 4%;
+}
+
+.cg-01 p,
+.cg-01 h2 {
+  text-align: left;
+}
+
+.cg-01 ul {
+  margin-left: 10px;
+
+  direction: ltr;
+}
+
+.cg-02 ul,
+.cg-02 h2 {
+  right: 0;
+
+  margin-right: 20px;
+
+  text-align: right;
+
+  direction: rtl;
+}
+
+.cg-02 ul {
+  margin-right: 10px;
+}
+
+li:before {
+  margin-left: -0.25rem;
+
+  content: "";
+}
+
+li:after {
+  margin-right: -0.5rem;
+
+  content: "";
+}
+
+.list-block h2,
+.list-block p {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+ul,
+h2,
+p {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.last {
+  margin-bottom: 80px;
+}
+
+.column-grid,
+.cg-01,
+.cg-02,
+.cg-03 {
+  display: inline-block;
+
+  width: 70%;
+  max-width: 800px;
+  margin: 0;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding: 0 0 0 0;
+
+  vertical-align: top;
+
+  /*border: 1px solid green;*/
+}
+
+.column-grid.cg-01.map-directions {
+  width: 35%;
+  padding-top: 20px;
+}
+
+.img-section.map-directions {
+  width: 65%;
+  max-width: 1400px;
+}
+
+@media (max-width: 550px) {
+  .column-grid,
+  .cg-01,
+  .cg-02,
+  .cg-03,
+  .column-grid.cg-01.map-directions {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+  }
+
+  .img-section,
+  .img-01,
+  .img-02,
+  .img-section.map-directions {
+    width: 100%;
+    max-width: none;
+    /*float: none;*/
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+
+  .cg-02 ul,
+  .cg-02 h2 {
+    left: 0;
+
+    margin-right: 0;
+
+    text-align: left;
+
+    direction: ltr;
+  }
+
+  .cg-02 ul {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+}
+
+/* START ********** App.vue CSS *********** */
+.home-no-scroll {
+  overflow: hidden;
+
+  margin-top: 0;
+}
+
+.language-select {
+  position: fixed;
+  z-index: 99;
+  right: 50%;
+  bottom: 0;
+
+  display: block;
+
+  width: 100px;
+  height: 100px;
+  padding-bottom: 30px;
+
+  cursor: pointer;
+  transition: color 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  transform: translate(50%, 50%);
+
+  opacity: 0.5;
+  color: rgba(230, 230, 230, 0.7);
+  border: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--nav-background);
+  /* Prevent background color leak outs */
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.language-select:hover {
+  /*color: rgba(230, 230, 230, 1);*/
+  opacity: 1;
+  /*transition: color 0.5s ease-in-out;*/
+  /*transition: opacity 0.5s ease-in-out;*/
+}
+.language-icon-crop {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  overflow: hidden;
+
+  width: 100px;
+  height: 25px;
+}
+.language-icon {
+  position: relative;
+  top: 4px;
+  left: 4px;
+
+  display: block;
+  overflow: hidden;
+
+  width: 92px;
+  height: 92px;
+
+  transition: background 0.5s ease-in-out;
+  transform: translate(0%, 0%);
+
+  border-radius: 50%;
+  background: url(/img/img-flag-slovakia.png);
+  background-color: lightskyblue;
+  background-repeat: no-repeat;
+  background-position: 5px -17px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-size: 100px;
+}
+.english {
+  overflow: hidden;
+
+  transition: background 0.5s ease-in-out;
+
+  background: url(/img/img-flag-united-states.png);
+  background-repeat: no-repeat;
+  background-position: 10% -20%;
+  background-size: 120%;
+}
+
+/* START ********** Home Page CSS *********** */
+
+.home-image-wrapper {
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  /*border: 1px solid orange;*/
+  margin: auto;
+  padding: 0;
+  width: 100vw;
+  max-width: 1400px;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #663969;
+}
+
+.home-page-image {
+  position: absolute;
+  display: block;
+  /*border: 1px solid;*/
+  margin: 0;
+  padding: 0;
+  width: 50vw;
+  max-width: 700px;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.top_left {
+  top: 50%;
+  right: 50%;
+  transform: translate(0%, -100%);
+  background-image: url(/img/img-yoga-mandala-home-page-01a-foreground-TL.png),
+    url(/img/img-yoga-mandala-home-page-01b-bkg-cross-TL.png),
+    url(/img/img-yoga-mandala-home-page-01c-bkg-Left.png);
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-size: contain, 100%, 100%;
+  background-position: bottom right, bottom right, bottom right;
+  background-color: #663969;
+  /*box-shadow: 5px 5px 50px 20px rgba(77, 27, 80, 0.85) inset;*/
+}
+
+.bottom_left {
+  top: 50%;
+  right: 50%;
+  transform: translate(0%, 0%);
+  background-image: url(/img/img-yoga-mandala-home-page-01a-foreground-BL.png),
+    url(/img/img-yoga-mandala-home-page-01b-bkg-cross-BL.png),
+    url(/img/img-yoga-mandala-home-page-01c-bkg-Left.png);
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-size: contain, 100%, 100%;
+  background-position: top right, top right, top right;
+  background-color: #663969;
+  /*box-shadow: 5px 5px 50px 20px rgba(77, 27, 80, 0.85) inset;*/
+}
+.top_right {
+  top: 50%;
+  right: 50%;
+  transform: translate(100%, -100%);
+  background-image: url(/img/img-yoga-mandala-home-page-01a-foreground-TR.png),
+    url(/img/img-yoga-mandala-home-page-01b-bkg-cross-TR.png),
+    url(/img/img-yoga-mandala-home-page-01c-bkg-Right.png);
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-size: contain, 100%, 100%;
+  background-position: bottom left, bottom left, bottom left;
+  background-color: #663969;
+  /*box-shadow: 5px 5px 50px 20px rgba(77, 27, 80, 0.85) inset;*/
+}
+
+.bottom_right {
+  top: 50%;
+  right: 50%;
+  transform: translate(100%, 0%);
+  background-image: url(/img/img-yoga-mandala-home-page-01c-bkg-Right.png);
+  background-repeat: repeat;
+  background-size: 100%;
+  background-position: top left;
+  background-color: #663969;
+  /*box-shadow: 5px 5px 50px 20px rgba(77, 27, 80, 0.85) inset;*/
+}
+
+.top_left.error,
+.bottom_left.error,
+.top_right.error,
+.bottom_right.error {
+  background-blend-mode: luminosity;
+  background-color: #2e272e;
+}
+
+.home-page-name-top {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  /* height: 100%; */
+  /* padding-top: 46%; */
+  top: 46%;
+  transform: translate(0%, -50%);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 3rem;
+  font-family: "AirExtdCustom", Verdana, sans-serif;
+  line-height: 1.9rem;
+}
+.letter-t {
+  margin-left: -8px;
+}
+
+.letter-a {
+  margin-left: 2px;
+  /*z-index: -1;*/
+}
+
+.home-page-name-yoga {
+  font-size: 1.7rem;
+  margin-left: 0px;
+  letter-spacing: 0.15em;
+}
+
+.glow {
+  text-shadow: 0 0 30px #c17bac94, 0 0 10px #663969, 0 0 10px #ff4da6,
+    0 0 10px #663969, 0 0 10px #663969, 0 0 10px #663969, 0 0 100px #663969;
+}
+
+.error .glow {
+  text-shadow: 0 0 30px #c4c4c494, 0 0 10px #545454, 0 0 10px #ffffff,
+    0 0 10px #545454, 0 0 10px #545454, 0 0 10px #545454, 0 0 100px #545454;
+}
+
+.error p {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin: 0 auto;
+}
+.error p:nth-child(2) {
+  margin-top: 15px;
+}
+.home-page-name-wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: calc(100vw / 2);
+}
+
+/* START ********** HERO IMAGES *********** */
+.hero-image-fixed {
+  position: fixed;
+  top: 0;
+
+  width: 100%;
+  max-width: 1400px;
+  height: 100vh;
+  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 25px;
+  padding-top: 70px;
+  padding-bottom: 30%;
+  /*background-image: url(/img/img-kat-yoga-hero-image-instructor-v03.png);*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+  /*opacity: 1;*/
+  /*transition: 0.5s background-position ease;
+  transition: 0.5s background-size ease;*/
+  /*transition: 0.5s background-image ease;*/
+  /*transition: 0.5s opacity ease;*/
+
+  /*transition: 0.5s all ease-in-out;*/
+
+  /*border: 1px solid red;*/
+}
+.about .hero-image-fixed {
+  background-image: url(/img/img-katia-hero-about-1400px-v02.png);
+  transition: 0.5s background-position ease;
+  transition: 0.5s background-size ease;
+}
+
+.classes .hero-image-fixed {
+  background-image: url(/img/img-kat-yoga-hero-image-classes-v02.png);
+  transition: 0.5s background-position ease;
+  transition: 0.5s background-size ease;
+}
+
+.contact .hero-image-fixed {
+  background-image: url(/img/img-kat-yoga-hero-image-contact-v02.png);
+  transition: 0.5s background-position ease;
+  transition: 0.5s background-size ease;
+}
+
+.instructor .hero-image-fixed {
+  background-image: url(/img/img-kat-yoga-hero-image-instructor-v03.png);
+  transition: 0.5s background-position ease;
+  transition: 0.5s background-size ease;
+}
+
+@media (max-width: 700px) {
+  .hero-image-fixed {
+    background-position: 50% 50%;
+    background-size: 225%;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  .hero-image-fixed {
+    background-position: 50% 85%;
+    background-size: 160%;
+  }
+}
+
+@media (min-width: 1001px) {
+  .hero-image-fixed {
+    background-position: 50% 75%;
+    background-size: 110%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero-image-fixed {
+    background-position: 0 -155px;
+    background-size: 1400px;
+  }
+}
+
+@media (max-width: 1399px) and (max-height: 1100px) {
+  .hero-image-fixed {
+    background-position: 50% 45%;
+    background-size: 110%;
+  }
+  .contact .hero-image-fixed {
+    background-position: 50% 65%;
+    background-size: 110%;
+  }
+}
+
+@media (max-width: 1399px) and (max-height: 850px) {
+  .hero-image-fixed {
+    background-position: 50% 50%;
+    background-size: 100%;
+  }
+  .contact .hero-image-fixed {
+    background-position: 50% 65%;
+    background-size: 110%;
+  }
+}
+
+@media (max-width: 1399px) and (max-height: 750px) {
+  .hero-image-fixed {
+    background-position: 58% 35%;
+    background-size: 175%;
+  }
+  .contact .hero-image-fixed {
+    background-position: 50% 60%;
+    background-size: 110%;
+  }
+}
+
+/* **************** 1400 PX Wide ***************** */
+
+@media (min-width: 1400px) and (max-height: 1100px) {
+  .hero-image-fixed {
+    background-position: 50% 45%;
+    background-size: 110%;
+  }
+  .contact .hero-image-fixed {
+    background-position: 50% 65%;
+    background-size: 110%;
+  }
+}
+
+@media (min-width: 1400px) and (max-height: 850px) {
+  .hero-image-fixed {
+    background-position: 50% 50%;
+    background-size: 100%;
+  }
+  .contact .hero-image-fixed {
+    background-position: 50% 65%;
+    background-size: 110%;
+  }
+}
+
+@media (min-width: 1400px) and (max-height: 750px) {
+  .hero-image-fixed {
+    background-position: 58% 35%;
+    background-size: 175%;
+  }
+  .contact .hero-image-fixed {
+    background-position: 50% 60%;
+    background-size: 110%;
+  }
+}
+
+/* START *********** HERO IMAGE TITLE ************ */
+
+.hero-header-text {
+  position: absolute;
+
+  display: block;
+
+  width: 100%;
+  height: 215px;
+  margin: 0 auto;
+  margin-top: calc((100vh - 214px) * -1);
+  margin-bottom: 20px;
+  padding-top: calc(100vh - 390px);
+
+  text-align: center;
+
+  opacity: 0;
+  /*border: 5px solid lime;*/
+}
+
+.hero-header-text-main {
+  position: absolute;
+  display: block;
+
+  bottom: 150px;
+  width: 100%;
+  margin: 0 auto;
+
+  text-align: center;
+  font-size: 3rem;
+}
+
+.about .hero-header-text-main {
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 30px #fff, 0 0 10px #285d5c, 0 0 10px #4dffa9,
+    0 0 10px #285d5c, 0 0 10px #285d5c, 0 0 10px #285d5c, 0 0 100px #285d5c;
+}
+
+.classes .hero-header-text-main {
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 30px #fff, 0 0 10px #5b71a6, 0 0 10px #2c9aff,
+    0 0 10px #5b71a6, 0 0 10px #5b71a6, 0 0 10px #5b71a6, 0 0 100px #5b71a6;
+}
+
+.contact .hero-header-text-main {
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 30px #fff, 0 0 10px #ae1212, 0 0 10px #ffa1a1,
+    0 0 10px #ae1212, 0 0 10px #ae1212, 0 0 10px #ae1212, 0 0 100px #ae1212;
+}
+
+.instructor .hero-header-text-main {
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 30px #fff, 0 0 10px #b55900, 0 0 10px #ffd100,
+    0 0 10px #b55900, 0 0 10px #b55900, 0 0 10px #b55900, 0 0 100px #b55900;
+}
+
+@media (max-width: 550px) {
+  .mobile-hide-me {
+    display: none;
+  }
+}
+
+/* START *********** PAGE H1 TITLE BACKGROUNDS  ************ */
+
+.main-content-headline-bkg {
+  display: block;
+  width: 100%;
+  height: 215px;
+  margin: 0 auto;
+  margin-bottom: 0;
+  background-image: url(/img/img-header-headline-bkg-gray-yellow-light-extra-v02.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  /*border: 5px solid red;*/
+}
+
+.about .main-content-wrapper .main-content-headline-bkg {
+  background-image: url(/img/img-header-headline-bkg-gray-green-light-extra-v02.png);
+}
+
+.instructor .main-content-wrapper .main-content-headline-bkg {
+  background-image: url(/img/img-header-headline-bkg-gray-yellow-light-extra-v02.png);
+}
+
+.classes .main-content-wrapper .main-content-headline-bkg {
+  background-image: url(/img/img-header-headline-bkg-gray-blue-light-extra-v02.png);
+}
+
+.contact .main-content-wrapper .main-content-headline-bkg {
+  background-image: url(/img/img-header-headline-bkg-gray-red-light-extra-v02.png);
+}

@@ -1,0 +1,1933 @@
+@import "./base.css";
+
+.app-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#app {
+  font-weight: normal;
+  max-width: 1400px;
+  margin: 0 auto;
+  /*padding: 2rem;*/
+}
+
+a,
+.green {
+  transition: 0.4s;
+  text-decoration: none;
+
+  color: var(--nav-btn-text);
+  border-bottom: 3px solid transparent;
+}
+
+@media (hover: hover) {
+  a:hover {
+    /*border-color: var(--nav-btn-text-hover);*/
+    text-shadow: 0 0 30px rgba(255, 255, 255, 1),
+      0 0 10px rgba(255, 255, 255, 0.35), 0 0 10px rgba(255, 255, 255, 0.35),
+      0 0 10px rgba(255, 255, 255, 0.35), 0 0 10px rgba(255, 255, 255, 0.35),
+      0 0 10px rgba(255, 255, 255, 0.35), 0 0 50px rgba(255, 255, 255, 0.35);
+  }
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* for some reason <b> and <strong> tags are not 
+ working with v-html or v-t in the vue template
+ only a <spam> tag with a CSS class of bold worked */
+.bold {
+  font-weight: bold;
+}
+
+.paragraph-link {
+  transition: 0.4s;
+  text-decoration: none;
+
+  color: var(--color-text);
+  border-bottom: 2px solid transparent;
+}
+
+.paragraph-link:hover {
+  border-color: var(--color-text-hover);
+}
+
+.legal-copy {
+  position: fixed;
+  margin: 0 auto;
+  left: 50%;
+  bottom: -3px;
+  transform: translate(-50%, 0%);
+  width: 100%;
+  max-width: 1400px;
+  padding-left: 0px;
+  color: rgba(125, 125, 125, 1);
+  font-size: 10px;
+  opacity: 0.65;
+}
+
+@media (max-width: 625px) {
+  .legal-copy {
+    padding-left: 0px;
+    padding-right: 65%;
+  }
+}
+
+/* ***************************************************************************** */
+/* **************************   Page Route Views CSS  ************************** */
+/* ***************************************************************************** */
+
+.about,
+.classes,
+.contact,
+.home,
+.instructor {
+  position: fixed;
+  display: block;
+  margin: auto;
+  padding-top: 85px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  min-height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /*padding-bottom: 80px;*/
+  background-image: url(/img/img-seamless-texture-gray-green-light-extra.png);
+  background-repeat: repeat;
+  clip-path: inset(0 0 0 0);
+}
+
+.about {
+  background-image: url(/img/img-seamless-texture-gray-green-light-extra.png);
+}
+
+.instructor {
+  background-image: url(/img/img-seamless-texture-gray-yellow-light-extra.png);
+}
+
+.home {
+  background-color: #663969;
+}
+
+.classes {
+  background-image: url(/img/img-seamless-texture-gray-blue-light-extra.png);
+}
+
+.contact {
+  background-image: url(/img/img-seamless-texture-gray-red-light-extra.jpg);
+}
+
+.main-content-wrapper {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0%;
+  max-width: 800px;
+  height: 100%;
+  min-height: 100vh;
+}
+
+@media (min-width: 1400px) {
+  .about,
+  .classes,
+  .contact,
+  .home,
+  .instructor {
+    width: 100%;
+    max-width: 1400px;
+    /*CSS Comb will hang on the calc statement*/
+    margin-left: calc(((100vw - 1400px) * 0.5));
+    margin-right: 0;
+  }
+}
+
+.row {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.row:first-of-type {
+  margin-top: 85px;
+  padding-top: 5px;
+}
+
+.main-content-wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 100vh;
+}
+.main-content {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 1400px;
+  min-height: calc(67vh + 85px);
+  padding-bottom: 85px;
+  margin: 0 auto;
+  background-image: url(/img/img-seamless-texture-gray-yellow-light-extra.png);
+  background-repeat: repeat;
+  z-index: 2;
+}
+
+#main-content-wrapper-bkg-img-pattern {
+  position: fixed;
+  top: 68px;
+  width: 100%;
+  max-width: 1400px;
+  height: calc(100% - 68px);
+  background-image: url(/img/img-yoga-mandala-seamless-50-opacity-gray.png);
+  background-repeat: repeat;
+  background-size: 150%;
+  background-position: center center;
+  z-index: -1;
+}
+
+.about .main-content-wrapper .main-content {
+  background-image: url(/img/img-seamless-texture-gray-green-light-extra.png);
+}
+
+.instructor .main-content-wrapper .main-content {
+  background-image: url(/img/img-seamless-texture-gray-yellow-light-extra.png);
+}
+
+.classes .main-content-wrapper .main-content {
+  background-image: url(/img/img-seamless-texture-gray-blue-light-extra.png);
+}
+
+.contact .main-content-wrapper .main-content {
+  background-image: url(/img/img-seamless-texture-gray-red-light-extra.png);
+}
+
+.img-section {
+  display: inline-block;
+  width: 30%;
+  max-width: 300px;
+  margin: 0 0 15px 0;
+  vertical-align: top;
+}
+
+.image-block div.img-section {
+  display: inline-block;
+  width: 48%;
+}
+
+div.img-section img,
+div.img-section span {
+  display: block;
+  width: 100%;
+}
+div.img-section img {
+  margin-bottom: 5px;
+}
+
+div.img-section span {
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+  color: rgba(77, 57, 37, 0.75);
+  background-color: rgba(77, 57, 37, 0.15);
+}
+
+div.img-section span:first-of-type {
+  font-weight: bold;
+  padding-top: 5px;
+  border-radius: 5px 5px 0 0;
+}
+
+div.img-section span:last-of-type {
+  padding-bottom: 10px;
+  border-radius: 0 0 5px 5px;
+}
+
+.image-block div.img-section::after {
+  padding-bottom: 0;
+}
+
+.img-section::after {
+  display: block;
+  padding-bottom: 100%;
+  content: "";
+}
+
+.margin-rt {
+  margin-right: 4%;
+}
+
+.cg-01 p,
+.cg-01 h2 {
+  text-align: left;
+}
+
+.cg-01 ul {
+  margin-left: 10px;
+  direction: ltr;
+}
+
+.cg-02 ul,
+.cg-02 h2 {
+  right: 0;
+  margin-right: 20px;
+  text-align: right;
+  direction: rtl;
+}
+
+.cg-02 ul {
+  margin-right: 10px;
+}
+
+li::before {
+  margin-left: -0.25rem;
+  content: "";
+}
+
+li::after {
+  margin-right: -0.5rem;
+  content: "";
+}
+
+.list-block h2,
+.list-block p {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+ul,
+h2,
+p {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.last {
+  margin-bottom: 80px;
+}
+
+.column-grid,
+.cg-01,
+.cg-02,
+.cg-03 {
+  display: inline-block;
+  width: 70%;
+  max-width: 800px;
+  margin: 0;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding: 0 0 0 0;
+  vertical-align: top;
+}
+
+.column-grid.cg-01.map-directions {
+  width: 35%;
+  padding-top: 20px;
+}
+
+.img-section.map-directions {
+  width: 65%;
+  max-width: 1400px;
+}
+
+@media (max-width: 550px) {
+  .column-grid,
+  .cg-01,
+  .cg-02,
+  .cg-03,
+  .column-grid.cg-01.map-directions {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+  }
+
+  .img-section,
+  .img-01,
+  .img-02,
+  .img-section.map-directions {
+    width: 100%;
+    max-width: none;
+    /*float: none;*/
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+
+  .cg-02 ul,
+  .cg-02 h2 {
+    left: 0;
+    margin-right: 0;
+    text-align: left;
+    direction: ltr;
+  }
+
+  .cg-02 ul {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+}
+
+/* ***************************************************************************** */
+/* *******************************   App.vue CSS  ****************************** */
+/* ***************************************************************************** */
+
+.home-no-scroll {
+  overflow: hidden;
+
+  margin-top: 0;
+}
+
+.language-select {
+  position: fixed;
+  z-index: 99;
+  right: 50%;
+  bottom: 0;
+
+  display: block;
+
+  width: 100px;
+  height: 100px;
+  padding-bottom: 30px;
+
+  cursor: pointer;
+  transition: color 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  transform: translate(50%, 50%);
+
+  opacity: 0.5;
+  color: rgba(230, 230, 230, 0.7);
+  border: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--nav-background);
+  /* Prevent background color leak outs */
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.language-select:hover {
+  opacity: 1;
+}
+
+.language-icon-crop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  overflow: hidden;
+  width: 100px;
+  height: 25px;
+}
+
+.language-icon {
+  position: relative;
+  top: 4px;
+  left: 4px;
+  display: block;
+  overflow: hidden;
+  width: 92px;
+  height: 92px;
+  transition: background 0.5s ease-in-out;
+  transform: translate(0%, 0%);
+  border-radius: 50%;
+  background: url(/img/img-flag-slovakia.png);
+  background-color: lightskyblue;
+  background-repeat: no-repeat;
+  background-position: 5px -17px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-size: 100px;
+}
+.english {
+  overflow: hidden;
+
+  transition: background 0.5s ease-in-out;
+
+  background: url(/img/img-flag-united-states.png);
+  background-repeat: no-repeat;
+  background-position: 10% -20%;
+  background-size: 120%;
+}
+
+/* ***************************************************************************** */
+/* ******************************  Home Page CSS  ****************************** */
+/* ***************************************************************************** */
+
+.home-image-wrapper {
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  margin: auto;
+  padding: 0;
+  width: 100vw;
+  max-width: 1400px;
+  height: 100%;
+  overflow: hidden;
+  background-color: #663969;
+}
+
+.home-page-image {
+  position: absolute;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 50vw;
+  max-width: 700px;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.top_left {
+  top: 50%;
+  right: 50%;
+  transform: translate(0%, -100%);
+  background-image: url(/img/img-yoga-mandala-home-page-01a-foreground-TL.png),
+    url(/img/img-yoga-mandala-home-page-01b-bkg-cross-TL.png),
+    url(/img/img-yoga-mandala-home-page-01c-bkg-Left.png);
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-size: contain, 100%, 100%;
+  background-position: bottom right, bottom right, bottom right;
+  background-color: #663969;
+}
+
+.bottom_left {
+  top: 50%;
+  right: 50%;
+  transform: translate(0%, 0%);
+  background-image: url(/img/img-yoga-mandala-home-page-01a-foreground-BL.png),
+    url(/img/img-yoga-mandala-home-page-01b-bkg-cross-BL.png),
+    url(/img/img-yoga-mandala-home-page-01c-bkg-Left.png);
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-size: contain, 100%, 100%;
+  background-position: top right, top right, top right;
+  background-color: #663969;
+}
+.top_right {
+  top: 50%;
+  right: 50%;
+  transform: translate(100%, -100%);
+  background-image: url(/img/img-yoga-mandala-home-page-01a-foreground-TR.png),
+    url(/img/img-yoga-mandala-home-page-01b-bkg-cross-TR.png),
+    url(/img/img-yoga-mandala-home-page-01c-bkg-Right.png);
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-size: contain, 100%, 100%;
+  background-position: bottom left, bottom left, bottom left;
+  background-color: #663969;
+}
+
+.bottom_right {
+  top: 50%;
+  right: 50%;
+  transform: translate(100%, 0%);
+  background-image: url(/img/img-yoga-mandala-home-page-01c-bkg-Right.png);
+  background-repeat: repeat;
+  background-size: 100%;
+  background-position: top left;
+  background-color: #663969;
+}
+
+.top_left.error,
+.bottom_left.error,
+.top_right.error,
+.bottom_right.error {
+  background-blend-mode: luminosity;
+  background-color: #2e272e;
+}
+
+.home-page-name-top {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  top: 46%;
+  transform: translate(0%, -50%);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 3rem;
+  font-family: "AirExtdCustom", Verdana, sans-serif;
+  line-height: 1.9rem;
+}
+.letter-t {
+  margin-left: -8px;
+}
+
+.letter-a {
+  margin-left: 2px;
+}
+
+.home-page-name-yoga {
+  font-size: 1.7rem;
+  margin-left: 0px;
+  letter-spacing: 0.15em;
+}
+
+.glow {
+  text-shadow: 0 0 30px #c17bac94, 0 0 10px #663969, 0 0 10px #ff4da6,
+    0 0 10px #663969, 0 0 10px #663969, 0 0 10px #663969, 0 0 100px #663969;
+}
+
+.error .glow {
+  text-shadow: 0 0 30px #c4c4c494, 0 0 10px #545454, 0 0 10px #ffffff,
+    0 0 10px #545454, 0 0 10px #545454, 0 0 10px #545454, 0 0 100px #545454;
+}
+
+.error p {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin: 0 auto;
+}
+.error p:nth-child(2) {
+  margin-top: 15px;
+}
+.home-page-name-wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: calc(100vw / 2);
+}
+
+/* ***************************************************************************** */
+/* ****************************  CLASSES Page CSS  ***************************** */
+/* ***************************************************************************** */
+
+.spacer-15 {
+  margin-top: 15px;
+}
+
+.spacer-30 {
+  margin-top: 30px;
+}
+
+/* ***************************************************************************** */
+/* *******************************  HERO IMAGES  ******************************* */
+/* ***************************************************************************** */
+
+.hero-image-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 25px;
+  padding-top: 70px;
+  padding-bottom: 30%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+}
+.about .hero-image-fixed {
+  background-image: url(/img/img-katia-hero-about-1400px-v02.png);
+  transition: 0.5s background-position ease;
+  transition: 0.5s background-size ease;
+}
+
+.classes .hero-image-fixed {
+  background-image: url(/img/img-kat-yoga-hero-image-classes-v02.png);
+  transition: 0.5s background-position ease;
+  transition: 0.5s background-size ease;
+}
+
+.contact .hero-image-fixed {
+  background-image: url(/img/img-kat-yoga-hero-image-contact-v02.png);
+  transition: 0.5s background-position ease;
+  transition: 0.5s background-size ease;
+}
+
+.instructor .hero-image-fixed {
+  background-image: url(/img/img-kat-yoga-hero-image-instructor-v03.png);
+  transition: 0.5s background-position ease;
+  transition: 0.5s background-size ease;
+}
+
+@media (max-width: 700px) {
+  .hero-image-fixed {
+    background-position: 50% 50%;
+    background-size: 225%;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  .hero-image-fixed {
+    background-position: 50% 85%;
+    background-size: 155%;
+  }
+}
+
+@media (min-width: 1001px) {
+  .hero-image-fixed {
+    background-position: 50% 75%;
+    background-size: 110%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero-image-fixed {
+    background-position: 0 -155px;
+    background-size: 1400px;
+  }
+}
+
+@media (max-width: 1399px) and (max-height: 1100px) {
+  .hero-image-fixed {
+    background-position: 50% 45%;
+    background-size: 110%;
+  }
+  .contact .hero-image-fixed {
+    background-position: 50% 65%;
+    background-size: 110%;
+  }
+}
+
+@media (max-width: 1399px) and (max-height: 850px) {
+  .hero-image-fixed {
+    background-position: 50% 50%;
+    background-size: 100%;
+  }
+  .contact .hero-image-fixed {
+    background-position: 50% 65%;
+    background-size: 110%;
+  }
+}
+
+@media (max-width: 1399px) and (max-height: 750px) {
+  .hero-image-fixed {
+    background-position: 58% 35%;
+    background-size: 175%;
+  }
+  .contact .hero-image-fixed {
+    background-position: 50% 60%;
+    background-size: 110%;
+  }
+}
+
+/* **************** 1400 PX Wide ***************** */
+
+@media (min-width: 1400px) and (max-height: 1100px) {
+  .hero-image-fixed {
+    background-position: 50% 45%;
+    background-size: 110%;
+  }
+  .contact .hero-image-fixed {
+    background-position: 50% 65%;
+    background-size: 110%;
+  }
+}
+
+@media (min-width: 1400px) and (max-height: 850px) {
+  .hero-image-fixed {
+    background-position: 50% 50%;
+    background-size: 100%;
+  }
+  .contact .hero-image-fixed {
+    background-position: 50% 65%;
+    background-size: 110%;
+  }
+}
+
+@media (min-width: 1400px) and (max-height: 750px) {
+  .hero-image-fixed {
+    background-position: 58% 35%;
+    background-size: 175%;
+  }
+  .contact .hero-image-fixed {
+    background-position: 50% 60%;
+    background-size: 110%;
+  }
+}
+
+/* ***************************************************************************** */
+/* *****************************  HERO IMAGE TITLE  **************************** */
+/* ***************************************************************************** */
+
+.hero-header-text {
+  position: absolute;
+
+  display: block;
+
+  width: 100%;
+  height: 215px;
+  margin: 0 auto;
+  margin-top: calc((100vh - 245px) * -1);
+  margin-bottom: 20px;
+  padding-top: calc(100vh - 420px);
+
+  text-align: center;
+
+  opacity: 0;
+}
+
+.hero-header-text-main {
+  position: absolute;
+  display: block;
+
+  bottom: 150px;
+  width: 100%;
+  margin: 0 auto;
+
+  text-align: center;
+  font-size: 3rem;
+}
+
+.about .hero-header-text-main {
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 30px #fff, 0 0 10px #285d5c, 0 0 10px #4dffa9,
+    0 0 10px #285d5c, 0 0 10px #285d5c, 0 0 10px #285d5c, 0 0 100px #285d5c;
+}
+
+.classes .hero-header-text-main {
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 30px #fff, 0 0 10px #5b71a6, 0 0 10px #2c9aff,
+    0 0 10px #5b71a6, 0 0 10px #5b71a6, 0 0 10px #5b71a6, 0 0 100px #5b71a6;
+}
+
+.contact .hero-header-text-main {
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 30px #fff, 0 0 10px #ae1212, 0 0 10px #ffa1a1,
+    0 0 10px #ae1212, 0 0 10px #ae1212, 0 0 10px #ae1212, 0 0 100px #ae1212;
+}
+
+.instructor .hero-header-text-main {
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 30px #fff, 0 0 10px #b55900, 0 0 10px #ffd100,
+    0 0 10px #b55900, 0 0 10px #b55900, 0 0 10px #b55900, 0 0 100px #b55900;
+}
+
+@media (max-width: 550px) {
+  .mobile-hide-me {
+    display: none;
+  }
+}
+
+/* ***************************************************************************** */
+/* ************************  PAGE H1 TITLE BACKGROUNDS  ************************ */
+/* ***************************************************************************** */
+
+.main-content-headline-bkg {
+  display: block;
+  width: 100%;
+  height: 215px;
+  margin: 0 auto;
+  margin-bottom: 0;
+  background-image: url(/img/img-header-headline-bkg-gray-yellow-light-extra-v02.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.about .main-content-wrapper .main-content-headline-bkg {
+  background-image: url(/img/img-header-headline-bkg-gray-green-light-extra-v02.png);
+}
+
+.instructor .main-content-wrapper .main-content-headline-bkg {
+  background-image: url(/img/img-header-headline-bkg-gray-yellow-light-extra-v02.png);
+}
+
+.classes .main-content-wrapper .main-content-headline-bkg {
+  background-image: url(/img/img-header-headline-bkg-gray-blue-light-extra-v02.png);
+}
+
+.contact .main-content-wrapper .main-content-headline-bkg {
+  background-image: url(/img/img-header-headline-bkg-gray-red-light-extra-v02.png);
+}
+
+/* ***************************************************************************** */
+/* **********************  Navigation-main.vue Page CSS  *********************** */
+/* ***************************************************************************** */
+
+header {
+  line-height: var(--nav-btn-height);
+  max-height: 100%;
+}
+
+.page-wrapper {
+  position: fixed;
+  z-index: 98;
+  top: 50%;
+  right: 50%;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  transform: translate(50%, -50%);
+  transition: all 0.5s ease-in-out;
+}
+
+.navigation-wrapper {
+  position: fixed;
+  z-index: 99;
+  top: 50%;
+  right: 50%;
+  display: block;
+  width: 100%;
+  max-width: 1400px;
+  height: 135px;
+  background-image: url(/img/img-torn-paper-strip-pink-dark.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 102% 50%;
+  transform: translate(50%, -50%);
+  transition: all 0.5s ease-in-out;
+}
+.navigation-wrapper-top {
+  display: block;
+  position: fixed;
+  z-index: 99;
+  top: -125px;
+  left: 0;
+  width: 100%;
+  max-width: 1400px;
+  height: 125px;
+  background-image: url(/img/img-torn-paper-strip-pink-dark.png);
+  background-position: 50% -30px;
+  background-size: 102% 114px;
+  background-repeat: no-repeat;
+  transform: translate(0%, 0%);
+  transition: opacity 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out;
+}
+
+.mobile-nav-wrapper {
+  display: block;
+  position: fixed;
+  z-index: 101;
+  top: -125px;
+  left: 0;
+  width: 100%;
+  height: 125px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.navigation-wrapper-top.page-about {
+  background-image: url(/img/img-torn-paper-strip-mint-dark.png);
+  background-repeat: no-repeat;
+  animation-name: directurlnav;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+  transition: opacity 0.5s ease-in-out;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.navigation-wrapper-top.page-instructor {
+  background-image: url(/img/img-torn-paper-strip-orange-dark.png);
+  background-repeat: no-repeat;
+  animation-name: directurlnav;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+  transition: opacity 0.5s ease-in-out;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.navigation-wrapper-top.page-classes {
+  background-image: url(/img/img-torn-paper-strip-blue-dark.png);
+  background-repeat: no-repeat;
+  animation-name: directurlnav;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+  transition: opacity 0.5s ease-in-out;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.navigation-wrapper-top.page-contact {
+  background-image: url(/img/img-torn-paper-strip-red-dark.png);
+  background-repeat: no-repeat;
+  animation-name: directurlnav;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+  transition: opacity 0.5s ease-in-out;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.navigation-wrapper-top.page-error {
+  background-image: url(/img/img-torn-paper-strip-gray-dark.png);
+  background-repeat: no-repeat;
+  animation-name: directurlnav;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+  transition: opacity 0.5s ease-in-out;
+  transition: background-image 0.5s ease-in-out;
+}
+
+@keyframes directurlnav {
+  0% {
+    top: -125px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+@media (max-width: 750px) {
+  .mobile-nav-wrapper.page-home {
+    background-image: url(/img/img-torn-paper-strip-pink-dark.png);
+    background-repeat: no-repeat;
+    background-position: 50% -30px;
+    background-size: 102% 114px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .mobile-nav-show {
+    top: 0;
+    visibility: visible;
+    background-repeat: no-repeat;
+    background-position: 50% -30px;
+    background-size: 102% 114px;
+    opacity: 1;
+  }
+
+  .mobile-nav-wrapper.mobile-nav-open {
+    background-color: none;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .mobile-nav-wrapper.mobile-nav-show.mobile-nav-open.page-home {
+    background-position: 50% -114px;
+  }
+
+  .mobile-nav-open .navigation-wrapper-top {
+    background-image: url(/img/img-torn-paper-strip-blank.png);
+  }
+
+  .navigation-wrapper-top .navigation {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+@media (min-width: 751px) {
+  .navigation {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 750px;
+    height: 100%;
+    margin: auto;
+    padding: 0;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+  }
+  .mobile-nav-wrapper.page-home {
+    top: -125px;
+    background-image: url(/img/img-torn-paper-strip-pink-dark.png);
+    background-repeat: no-repeat;
+    background-position: 50% -30px;
+    background-size: 102% 114px;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.navigation-wrapper-top a {
+  line-height: 40px;
+  height: 30%;
+  margin-top: 0.95rem;
+}
+
+.navigation.mobile {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.nav-btn {
+  position: relative;
+  display: inline-block;
+  width: 20%;
+  height: 27%;
+  margin-top: 47px;
+  text-align: center;
+}
+
+.page-wrapper::after {
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  height: 105px;
+  width: 105px;
+  opacity: 0;
+  margin: 0 auto;
+  background-image: url(/img/img-kat-yoga-logo-nav-bar-center.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-top: 0;
+  transform: translate(50%, -50%);
+  -webkit-filter: drop-shadow(0px 0px 3px #222);
+  filter: drop-shadow(0px 0px 3px #222);
+  animation-name: navcenterenter;
+  animation-direction: forwards;
+  animation-duration: 1s;
+  z-index: 99;
+  transition: all 1s ease-in-out;
+}
+
+@keyframes navcenterenter {
+  0% {
+    height: 1px;
+    width: 1px;
+    opacity: 0;
+  }
+  100% {
+    height: 105px;
+    width: 105px;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 750px) {
+  .page-wrapper::after {
+    animation-name: navcenterleave;
+    animation-duration: 1s;
+    animation-direction: normal;
+    z-index: 99;
+    transition: all 1s ease-in-out;
+  }
+  @keyframes navcenterleave {
+    0% {
+      height: 105px;
+      width: 105px;
+      opacity: 1;
+    }
+    100% {
+      height: 1px;
+      width: 1px;
+      opacity: 0;
+    }
+  }
+}
+
+@media (min-width: 751px) {
+  .page-wrapper::after {
+    height: 105px;
+    width: 105px;
+    opacity: 1;
+  }
+}
+
+.page-wrapper.page-is-open::after {
+  display: none;
+}
+
+.mobile-contact {
+  margin-bottom: 150px;
+}
+
+.page-is-open {
+  top: 50%;
+  right: 150%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 750px) {
+  .navigation-wrapper {
+    top: 50%;
+    right: 150%;
+    transition: all 0.5s ease-in-out;
+    transform: translate(50%, -50%);
+    opacity: 0;
+  }
+}
+
+.page-wrapper.page-is-open {
+  animation-name: reposition;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  clip-path: inset(0 0 0 0);
+}
+
+@keyframes reposition {
+  0% {
+    top: 50%;
+    right: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(50%, -50%);
+    opacity: 1;
+  }
+  49% {
+    top: 50%;
+    right: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(50%, -50%);
+    opacity: 0;
+  }
+  50% {
+    top: 0;
+    right: 50%;
+    width: 100%;
+    height: 125px;
+    transform: translate(50%, -100%);
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    right: 50%;
+    width: 100%;
+    height: 125px;
+    transform: translate(50%, 0%);
+    opacity: 1;
+  }
+}
+
+/* need this animation-fill-mode: forwards was causing an issue with the reverse transition */
+.page-wrapper.page-is-open {
+  top: 0;
+  right: 50%;
+  width: 100%;
+  height: 125px;
+  transform: translate(50%, 0%);
+  opacity: 1;
+}
+
+.home-btn-top {
+  color: rgba(255, 255, 255, 0.6);
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.6),
+    0 0 10px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.2),
+    0 0 10px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.2),
+    0 0 10px rgba(255, 255, 255, 0.2), 0 0 50px rgba(255, 255, 255, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.home-btn-top:hover {
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0 0 30px rgba(255, 255, 255, 1),
+    0 0 10px rgba(255, 255, 255, 0.55), 0 0 10px rgba(255, 255, 255, 0.55),
+    0 0 10px rgba(255, 255, 255, 0.55), 0 0 10px rgba(255, 255, 255, 0.55),
+    0 0 10px rgba(255, 255, 255, 0.55), 0 0 50px rgba(255, 255, 255, 0.55);
+}
+/* ***************************************************************************** */
+/* ****************************  Mobile Navigation  **************************** */
+/* ***************************************************************************** */
+
+.mobile-nav-branding {
+  display: block;
+  visibility: visible;
+  top: 0;
+  height: 85px;
+  max-height: 85px;
+  padding-top: 10px;
+  padding-left: 25px;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.mobile-nav-branding.mobile-nav-open {
+  opacity: 0;
+  top: -125px;
+}
+
+.mobile-nav-branding .company-name {
+  display: block;
+  position: absolute;
+  font-size: 1.25rem;
+  margin: 0 auto;
+  color: var(--nav-btn-text);
+}
+
+.mobile-nav-menu-btn {
+  position: absolute;
+  z-index: 103;
+  top: 3px;
+  right: 20px;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  opacity: 0.4;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-btn-burger {
+  position: absolute;
+  display: flex;
+  width: 30px;
+  height: 2px;
+  transition: all 0.5s ease-in-out;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.modal-nav-menu-btn:hover,
+.mobile-nav-menu-btn:hover {
+  opacity: 1;
+}
+
+.menu-btn-burger::before,
+.menu-btn-burger::after {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  content: "";
+  transition: all 0.5s ease-in-out;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.menu-btn-burger::before {
+  transform: translateY(-11px);
+}
+
+.menu-btn-burger::after {
+  transform: translateY(11px);
+}
+
+.navigation-wrapper-top.page-about::after,
+.navigation-wrapper-top.page-instructor::after,
+.navigation-wrapper-top.page-classes::after,
+.navigation-wrapper-top.page-contact::after,
+.navigation-wrapper-top.page-error::after,
+.navigation-wrapper-top::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  width: 100%;
+  height: 125px;
+  background-image: url(/img/img-kat-yoga-logo-nav-bar-center-blank.png);
+  background-repeat: no-repeat;
+  background-size: 12% 130px;
+  background-position: 50% -35px;
+  -webkit-filter: drop-shadow(0px 0px 3px #222);
+  filter: drop-shadow(0px 0px 3px #222);
+  z-index: -1;
+  opacity: 1;
+  transition: background-image 0.5s ease-in-out;
+  transition: background-size 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  /*border: 1px solid orange;*/
+}
+
+@media (max-width: 1100px) {
+  .navigation-wrapper-top.page-about::after,
+  .navigation-wrapper-top.page-instructor::after,
+  .navigation-wrapper-top.page-classes::after,
+  .navigation-wrapper-top.page-contact::after,
+  .navigation-wrapper-top.page-error::after,
+  .navigation-wrapper-top::after {
+    background-size: 14% 130px;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+@media (max-width: 1000px) {
+  .navigation-wrapper-top.page-about::after,
+  .navigation-wrapper-top.page-instructor::after,
+  .navigation-wrapper-top.page-classes::after,
+  .navigation-wrapper-top.page-contact::after,
+  .navigation-wrapper-top.page-error::after,
+  .navigation-wrapper-top::after {
+    background-size: 15% 130px;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+@media (max-width: 900px) {
+  .navigation-wrapper-top.page-about::after,
+  .navigation-wrapper-top.page-instructor::after,
+  .navigation-wrapper-top.page-classes::after,
+  .navigation-wrapper-top.page-contact::after,
+  .navigation-wrapper-top.page-error::after,
+  .navigation-wrapper-top::after {
+    background-size: 16% 130px;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+@media (max-width: 800px) {
+  .navigation-wrapper-top.page-about::after,
+  .navigation-wrapper-top.page-instructor::after,
+  .navigation-wrapper-top.page-classes::after,
+  .navigation-wrapper-top.page-contact::after,
+  .navigation-wrapper-top.page-error::after,
+  .navigation-wrapper-top::after {
+    background-size: 17% 130px;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+@media (max-width: 750px) {
+  .navigation-wrapper-top.page-about::after,
+  .navigation-wrapper-top.page-instructor::after,
+  .navigation-wrapper-top.page-classes::after,
+  .navigation-wrapper-top.page-contact::after,
+  .navigation-wrapper-top.page-error::after,
+  .navigation-wrapper-top::after {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.navigation-wrapper-top.page-about::after {
+  background-image: url(/img/img-kat-yoga-logo-nav-bar-center-mint-dark.png);
+  transition: background-image 0.5s ease-in-out;
+}
+
+.navigation-wrapper-top.page-instructor::after {
+  background-image: url(/img/img-kat-yoga-logo-nav-bar-center-orange-dark.png);
+  transition: background-image 0.5s ease-in-out;
+}
+
+.navigation-wrapper-top.page-classes::after {
+  background-image: url(/img/img-kat-yoga-logo-nav-bar-center-blue-dark.png);
+  transition: background-image 0.5s ease-in-out;
+}
+
+.navigation-wrapper-top.page-contact::after {
+  background-image: url(/img/img-kat-yoga-logo-nav-bar-center-red-dark.png);
+  transition: background-image 0.5s ease-in-out;
+}
+
+.navigation-wrapper-top.page-error::after {
+  background-image: url(/img/img-kat-yoga-logo-nav-bar-center-gray-dark.png);
+  transition: background-image 0.5s ease-in-out;
+}
+
+/* ANIMATION */
+.mobile-nav-menu-btn.mobile-nav-open .menu-btn-burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.mobile-nav-menu-btn.mobile-nav-open .menu-btn-burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.mobile-nav-menu-btn.mobile-nav-open .menu-btn-burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/* NAVIGATION */
+
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+nav {
+  font-size: 12px;
+  width: 100%;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+nav a.router-link-exact-active {
+  color: var(--nav-btn-text-active-section);
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0), 0 0 10px rgba(255, 255, 255, 0),
+    0 0 10px rgba(255, 255, 255, 0), 0 0 10px rgba(255, 255, 255, 0),
+    0 0 10px rgba(255, 255, 255, 0), 0 0 10px rgba(255, 255, 255, 0),
+    0 0 50px rgba(255, 255, 255, 0);
+  cursor: default;
+}
+
+nav .navigation .mobile a.router-link-exact-active {
+  color: var(--nav-btn-text);
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0), 0 0 10px rgba(255, 255, 255, 0),
+    0 0 10px rgba(255, 255, 255, 0), 0 0 10px rgba(255, 255, 255, 0),
+    0 0 10px rgba(255, 255, 255, 0), 0 0 10px rgba(255, 255, 255, 0),
+    0 0 50px rgba(255, 255, 255, 0);
+  cursor: default;
+}
+
+.navigation .mobile a:hover,
+.navigation .mobile a.router-link-exact-active:hover {
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0 0 30px rgba(255, 255, 255, 1),
+    0 0 10px rgba(255, 255, 255, 0.55), 0 0 10px rgba(255, 255, 255, 0.55),
+    0 0 10px rgba(255, 255, 255, 0.55), 0 0 10px rgba(255, 255, 255, 0.55),
+    0 0 10px rgba(255, 255, 255, 0.55), 0 0 50px rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+}
+
+.navigation .mobile a span {
+  transition: 0.4s;
+}
+.navigation .mobile a:hover > span,
+.navigation .mobile a.router-link-exact-active:hover > span {
+  -webkit-filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 1));
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 1));
+}
+
+nav a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+
+nav .home-btn-top:hover {
+  border-bottom: 0px solid transparent;
+  background-color: transparent;
+}
+
+.navigation.mobile a.router-link-exact-active {
+  color: var(--nav-btn-text-active-section);
+}
+
+nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid var(--nav-btn-text-active-section);
+}
+
+nav a:first-of-type {
+  border-left: 0;
+}
+
+nav a:nth-child(3) {
+  border-left: 0;
+}
+
+nav a:nth-child(4) {
+  border-left: 0;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    padding-right: calc(var(--section-gap) / 2);
+    place-items: center;
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-left: -1rem;
+    padding: 1rem 0;
+
+    text-align: left;
+  }
+}
+@media (max-width: 1023px) {
+  nav {
+    font-size: 1rem;
+  }
+
+  .nav-btn {
+    line-height: 37px;
+    margin-top: 1.12rem;
+    height: 27%;
+    margin-top: 47px;
+  }
+}
+
+.mobile {
+  position: fixed;
+  display: block;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  transition: background-color 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  background-color: rgba(10, 10, 10, 0.95);
+  background-color: none;
+  background-image: url(/img/img-yoga-mandala-seamless-75-opacity.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+}
+
+.mobile a {
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 12.95%;
+  padding: 0 0;
+  border-left: none;
+}
+
+.mobile-icon {
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin: auto;
+  margin-bottom: 10px;
+  background-image: url(/img/img-kat-yoga-pose-01.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.75;
+}
+
+.mobile-about {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 0px;
+  background-image: url(/img/img-kat-yoga-pose-01.png);
+}
+
+.mobile-instructor {
+  width: 80px;
+  height: 80px;
+  margin-top: -20px;
+  margin-bottom: -10px;
+  background-image: url(/img/img-kat-yoga-pose-02.png);
+}
+
+.mobile-home {
+  width: 50px;
+  height: 50px;
+  margin-top: -12px;
+  margin-bottom: 3px;
+  background-image: url(/img/img-kat-yoga-pose-03.png);
+}
+
+.mobile-classes {
+  width: 65px;
+  height: 65px;
+  margin-top: -19px;
+  margin-bottom: 0px;
+  background-image: url(/img/img-kat-yoga-pose-04.png);
+}
+
+.mobile-contact {
+  width: 40px;
+  height: 40px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  background-image: url(/img/img-kat-yoga-pose-05.png);
+}
+
+.nav-btn.last {
+  margin-bottom: 140px;
+}
+
+.mobile-nav-top-spacer {
+  position: relative;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 12.5vh;
+  min-height: 95px;
+}
+
+.page-wrapper.page-is-open {
+  height: 125px;
+  transition: height 0s ease-in-out;
+}
+
+.page-wrapper.page-is-open.mobile-nav-open {
+  animation-name: mobilenavheight;
+  animation-fill-mode: forwards;
+  transition: height 1s ease-in-out;
+}
+
+@keyframes mobilenavheight {
+  0% {
+    top: 0;
+    height: 125px;
+    opacity: 1;
+  }
+  49% {
+    top: -125px;
+    height: 125px;
+    opacity: 0;
+  }
+  50% {
+    top: 0;
+    height: 100%;
+    opacity: 0;
+  }
+  100% {
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+.hide-me {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.move-nav-back-up {
+  display: block;
+  animation-name: movenavforhome;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes movenavforhome {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: -125px;
+    opacity: 0;
+  }
+}
+
+/* ***************************************************************************** */
+/* **************************   Modal.vue Page CSS  **************************** */
+/* ***************************************************************************** */
+
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  transition: opacity 0.3s ease;
+}
+
+.modal-container {
+  width: 300px;
+  margin: auto;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all 0.3s ease;
+}
+
+.modal-header h3 {
+  margin-top: 0;
+  color: #42b983;
+}
+
+.modal-body {
+  margin: 20px 0;
+}
+
+.modal-default-button {
+  float: right;
+}
+
+/*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+
+.modal-enter-from {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.modal-leave-to {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.modal-enter-from .modal-container,
+.modal-leave-to .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+
+.instructor .img-section img {
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.img-modal {
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  margin: 0 auto;
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 10%;
+}
+
+.modal-nav-menu-btn {
+  position: fixed;
+  z-index: 103;
+  top: 3px;
+  right: 20px;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  opacity: 0.4;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ANIMATION */
+.modal-nav-menu-btn .menu-btn-burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+  transition: all 0.5s ease-in-out;
+}
+.modal-nav-menu-btn .menu-btn-burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  transition: all 0.5s ease-in-out;
+}
+
+.modal-nav-menu-btn .menu-btn-burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  transition: all 0.5s ease-in-out;
+}
+
+.modal-leave-to .menu-btn-burger {
+  transform: translateX(0px);
+  background: transparent;
+  box-shadow: none;
+  transition: all 0.35s ease-in-out;
+}
+
+.modal-leave-to .menu-btn-burger::before {
+  transform: rotate(0deg) translate(0px, 0px);
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+}
+
+.modal-leave-to .menu-btn-burger::after {
+  transform: rotate(-0deg) translate(0px, 0px);
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+}
+
+.zoom-btn-cert {
+  position: absolute;
+  border-radius: 22px 10px 22px 22px;
+  border-width: 0px;
+  top: 0;
+  right: 0;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-color: rgba(160, 50, 0, 0.65);
+  transition: all 0.5s ease-in-out;
+  opacity: 0.6;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.zoom-btn-burger {
+  position: absolute;
+  display: flex;
+  width: 20px;
+  height: 0px;
+  transition: all 0.5s ease-in-out;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.zoom-btn-burger::before,
+.zoom-btn-burger::after {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  content: "";
+  transition: all 0.5s ease-in-out;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.zoom-btn-burger::before {
+  transform: translateY(0px);
+  transform: rotate(90deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.zoom-btn-burger::after {
+  transform: translateY(0px);
+  transform: rotate(0deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.instructor .img-section img:hover ~ .zoom-btn-cert,
+.zoom-btn-cert:hover {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 10px 10px;
+  opacity: 1;
+  -webkit-filter: drop-shadow(0px 0px 15px rgba(245, 217, 0, 1));
+  filter: drop-shadow(0px 0px 15px rgba(245, 217, 0, 1));
+}
+
+.instructor .img-section img:hover ~ .zoom-btn-burger::before,
+.zoom-btn-cert:hover .zoom-btn-burger::before {
+  width: 30px;
+  background: rgba(245, 217, 0, 1);
+  transform: rotate(180deg);
+}
+
+.instructor .img-section img:hover ~ .zoom-btn-burger::after,
+.zoom-btn-cert:hover .zoom-btn-burger::after {
+  width: 30px;
+  background: rgba(245, 217, 0, 1);
+  transform: rotate(90deg);
+}
+
+/* ***************************************************************************** */
+/* **********************   Navigation-main.vue Page CSS  ********************** */
+/* ***************************************************************************** */
+
+.scroll-area-wrapper-fix {
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  top: calc((100vh + 215px) * -1);
+  width: 100%;
+  height: calc(100vh + 215px + 100%);
+}

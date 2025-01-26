@@ -1,0 +1,33 @@
+htaccess-file.txt
+
+see Vue Router docs: 
+https://router.vuejs.org/guide/essentials/history-mode.html#different-history-modes
+
+Also here:
+https://gist.github.com/Prezens/f99fd28124b5557eb16816229391afee
+
+and here: 
+https://stackoverflow.com/questions/47879936/vue-router-hosting-on-apache2
+
+// Current invisible file ".htaccess" for /dev/katyoga/ 
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /dev/katyoga/
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /dev/katyoga/index.html [L]
+</IfModule>
+
+
+// For final site use default project root
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>

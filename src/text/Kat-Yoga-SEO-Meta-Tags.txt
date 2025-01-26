@@ -1,0 +1,158 @@
+————————————————————————————————————————————————————————————
+———————————————————————————— Slovak ————————————————————————
+————————————————————————————————————————————————————————————  
+
+
+"_COMMENT_00": "--------------- Home Page --------------",
+  "tag-title-home": "Kat Yoga - Domov",
+  "tag-description-home": "Kat Yoga ponúka expertné hodiny jógy v centre mesta Košíc. Krásne jógové štúdio a priateľský zamestnanci Vám prinesú pocit uvoľnenia a maximálnej relaxácie.",
+  "tag-og-description-home": "Kat Yoga ponúka expertné hodiny jógy v centre mesta Košíc.Krásne jógové štúdio a priateľský zamestnanci Vám prinesú pocit uvoľnenia a maximálnej relaxácie.",
+  "tag-og-title-home": "Kat Yoga - Domov",
+
+  "i-01a-alt-img-tag-home": "Katarina Szaboova, Hlavná inštruktorka jógy, Písmeno K jógová pozícia",
+  "i-02a-alt-img-tag-home": "Katarina Szaboova, Hlavná inštruktorka jógy, Písmeno A jógová pozícia",
+  "i-03a-alt-img-tag-home": "Katarina Szaboova, Hlavná inštruktorka jógy, Písmeno T jógová pozícia",
+
+
+"_COMMENT_02": "--------------- About Page -------------",
+  "tag-title-about": "Kat Yoga - O štúdiu",
+  "tag-description-about": "Kat Yoga ponúka expertné hodiny jógy v centre mesta Košíc.Krásne butikové štúdio a priateľský zamestnanci Vám prinesú pocit uvoľnenia a maximálnej relaxácie.",
+  "tag-og-description-about": "Kat Yoga ponúka expertné hodiny jógy v centre mesta Košíc.Krásne butikové štúdio a priateľský zamestnanci Vám prinesú pocit uvoľnenia a maximálnej relaxácie.",
+  "tag-og-title-about": "Kat Yoga - O štúdiu",
+
+ "i-01a-alt-img-tag-about": "Katarina Szaboova, Hlavná inštruktorka jógy, jógová pozícia pred zelenou mandalou, hlavná fotka na vrchu stránky",
+  "i-02a-alt-img-tag-about": "Katarina Szaboova, Hlavná inštruktorka jógy, jógová pozícia vo Vysokých Tatrách",
+  "i-03a-alt-img-tag-about": "Kat Yoga butikové stúdio s jógovými podložkami a vankúšikmi",
+
+
+"_COMMENT_03": "--------------- Instructor Page -------------",
+  "tag-title-instructor": "Kat Yoga - Inštruktor",
+  "tag-description-instructor": "Kat Yoga hodiny sú vedené certifikovanou jógovou inštruktorkou, ktorej vášňou je pomôcť ľuďom s posilnením tela a ducha.",
+  "tag-og-description-instructor": "Kat Yoga hodiny sú vedené certifikovanou jógovou inštruktorkou, ktorej vášňou je pomôcť ľuďom s posilnením tela a ducha.",
+  "tag-og-title-instructor": "Kat Yoga - Inštruktor",
+
+  "i-01a-alt-img-tag-instructor": "Katarina Szaboova, Hlavná inštruktorka jógy, jógová pozícia pred tmavo oranžovou mandalou, hlavná fotka na vrchu stránky",
+  "i-02a-alt-img-tag-instructor": "Katarina Szaboova, Hlavná inštruktorka jógy, jógová pozícia v Kat Yoga štúdiu",
+  "i-03a-alt-img-tag-instructor": "Katarina Szaboova, Yoga Certification, Peaceful Babes Kids Yoga Teacher",
+  "i-04a-alt-img-tag-instructor": "Katarina Szaboova, Yoga Certification, Raj Yoga Rishikesh Instructor",
+  "i-05a-alt-img-tag-instructor": "Katarina Szaboova, Yoga Certification, Členkou Slovenskej Jógovej Asociácie",
+  "i-06a-alt-img-tag-instructor": "Katarina Szaboova, Yoga Certification, 500 hodinový Certifikát Inštruktorky Jógy",
+
+
+"_COMMENT_04": "--------------- Classes Page -------------",
+  "tag-title-classes": "Kat Yoga - Ponuka Hodín",
+  "tag-description-classes": "Kat Yoga ponúka expertné hodiny v rôznych štýloch jógy, ktoré sú prispôsobené každému človeku bez ohľadu na ich fyzickú zdatnosť.",
+  "tag-og-description-classes": "Kat Yoga ponúka expertné hodiny v rôznych štýloch jógy, ktoré sú prispôsobené každému človeku bez ohľadu na ich fyzickú zdatnosť.",
+  "tag-og-title-classes": "Kat Yoga - Ponuka Hodín",
+
+  "i-01a-alt-img-tag-classes": "Kat Yoga, hodina jógy stojaca v pozícii bojovníka 2 pred tmavo modrou mandalou, hlavná fotka na vrchu stránky",
+  "i-02a-alt-img-tag-classes": "Kat Yoga jógové štúdio, zobrazujúce jóga bloky, podložky, pekne uložené v čistých a bezpečných priestoroch.",
+  "i-03a-alt-img-tag-classes": "Kat Yoga jógové štúdio, študenti jógy cvičiaci jógové pozície v čistých a bezpečných priestoroch",
+
+
+"_COMMENT_05": "--------------- Contact -------------",
+  "tag-title-contact": "Kat Yoga - Kontakt",
+  "tag-description-contact": "Address: Kat Jóga Štúdio, Inovecká 3, 3 Poschodie, č.18, Košice 04011 | Phone: 0949-714-143 | Email: KatYogaStudio@gmail.com",
+  "tag-og-description-contact": "Address: Kat Jóga Štúdio, Inovecká 3, 3 Poschodie, č.18, Košice 04011 | Phone: 0949-714-143 | Email: KatYogaStudio@gmail.com",
+  "tag-og-title-contact": "Kat Yoga - Kontakt",
+
+
+ "i-01a-alt-img-tag-contact": "Katarina Szaboova, Hlavná inštruktorka jógy ukazuje jógovú pozíciu pred tmavo červenou mandalou, hlavná fotka na vrchu stránky",
+  "i-02a-alt-img-tag-contact": "Kat Jóga Štúdio, mapa ukazuje kde sa štúdio nachádza",
+
+
+"_COMMENT_06": "--------------- Error Page -------------",
+  "tag-title-error": "Kat Yoga - Error",
+  "tag-description-error": "Kat Yoga | Prepáčte, táto stránka neexistuje. Prosím, vyberte si stránku z navigačného menu.",
+  "tag-og-description-error": "Kat Yoga | Prepáčte, táto stránka neexistuje. Prosím, vyberte si stránku z navigačného menu.",
+  "tag-og-title-error": "Kat Yoga - Error",
+
+  "i-01a-alt-img-tag-error": "Katarina Szaboova, Hlavná inštruktorka jógy, Písmeno K jógová pozícia",
+  "i-02a-alt-img-tag-error": "Katarina Szaboova, Hlavná inštruktorka jógy , Písmeno A jógová pozícia",
+  "i-03a-alt-img-tag-error": "Katarina Szaboova, Hlavná inštruktorka jógy , Písmeno T jógová pozícia"
+
+
+
+
+
+————————————————————————————————————————————————————————————
+———————————————————————————— English ———————————————————————
+————————————————————————————————————————————————————————————
+
+
+
+"_COMMENT_00": "--------------- Home Page --------------",
+  "tag-title-home": "Kat Yoga - Home",
+  "tag-description-home": "Kat Yoga provides expert yoga instruction in the heart of Kosice, Slovakia. A beautiful studio and friendly staff add to a joyous experience.",
+  "tag-og-description-home": "Kat Yoga provides expert yoga instruction in the heart of Kosice, Slovakia. A beautiful studio and friendly staff add to a joyous experience.",
+  "tag-og-title-home": "Kat Yoga - Home",
+
+  "i-01a-alt-img-tag-home": "Katarina Szaboova, Head yoga instructor, Letter K yoga pose",
+  "i-02a-alt-img-tag-home": "Katarina Szaboova, Head yoga instructor, Letter A yoga pose",
+  "i-03a-alt-img-tag-home": "Katarina Szaboova, Head yoga instructor, Letter T yoga pose",
+
+
+"_COMMENT_02": "--------------- About Page -------------",
+  "tag-title-about": "Kat Yoga - About",
+  "tag-description-about": "Kat Yoga provides expert yoga instruction in the heart of Kosice, Slovakia. A beautiful studio and friendly staff add to a joyous experience.",
+  "tag-og-description-about": "Kat Yoga provides expert yoga instruction in the heart of Kosice, Slovakia. A beautiful studio and friendly staff add to a joyous experience.",
+  "tag-og-title-about": "Kat Yoga - About",
+
+  "i-01a-alt-img-tag-about": "Katarina Szaboova, Head yoga instructor, demonstrating yoga pose in front of a green mandala, hero image at the top of the page",
+  "i-02a-alt-img-tag-about": "Katarina Szaboova, Head yoga instructor, yoga pose in the High Tatra Mountains",
+  "i-03a-alt-img-tag-about": "Kat Yoga training studio with yoga mats and pillows",
+
+
+"_COMMENT_03": "--------------- Instructor Page -------------",
+  "tag-title-instructor": "SK-Kat Yoga - Instructor",
+  "tag-description-instructor": "SK-Kat Yoga classes are taught by certified, expert, yoga instructors who are passionate about sharing the amazing benefits of yoga training.",
+  "tag-og-description-instructor": "SK-Kat Yoga classes are taught by certified, expert, yoga instructors who are passionate about sharing the amazing benefits of yoga training.",
+  "tag-og-title-instructor": "SK-Kat Yoga - Instructor",
+
+
+"i-01a-alt-img-tag-instructor": "Katarina Szaboova, Head yoga instructor, demonstrating yoga pose in front of a dark orange mandala, hero image at the top of the page",
+  "i-02a-alt-img-tag-instructor": "Katarina Szaboova, Head yoga instructor, yoga pose in Kat Yoga training studio",
+  "i-03a-alt-img-tag-instructor": "Katarina Szaboova, Yoga Certification, Peaceful Babes Kids Yoga Teacher",
+  "i-04a-alt-img-tag-instructor": "Katarina Szaboova, Yoga Certification, Raj Yoga Rishikesh Instructor",
+  "i-05a-alt-img-tag-instructor": "Katarina Szaboova, Yoga Certification, Member of Slovak Yoga Association",
+  "i-06a-alt-img-tag-instructor": "Katarina Szaboova, Yoga Certification, 500 hour Yoga Teacher Training Certificate",
+
+
+"_COMMENT_04": "--------------- Classes Page -------------",
+  "tag-title-classes": "Kat Yoga - Classes",
+  "tag-description-classes": "Kat Yoga provides expert instruction in several yoga styles that are adapted to each participants capabilities and desires.",
+  "tag-og-description-classes": "Kat Yoga provides expert instruction in several yoga styles that are adapted to each participants capabilities and desires.",
+  "tag-og-title-classes": "Kat Yoga - Classes",
+
+  "i-01a-alt-img-tag-classes": "Kat Yoga, yoga class practicing warrior two pose in front of a dark blue mandala, hero image at the top of the page",
+  "i-02a-alt-img-tag-classes": "Kat Yoga training studio, featuring yoga blocks, yoga mats nicely organized in a clean, safe training environment",
+  "i-03a-alt-img-tag-classes": "Kat Yoga training studio, yoga students practicing yoga pose, clean, safe training environment",
+
+
+"_COMMENT_05": "--------------- Contact -------------",
+  "tag-title-contact": "Kat Yoga - Contact",
+  "tag-description-contact": "Address: Kat Yoga Studio, Inovecká 3, 3 Poschodie, č.18, Košice 04011 | Phone: 0949-714-143 | Email: KatYogaStudio@gmail.com",
+  "tag-og-description-contact": "Address: Kat Yoga Studio, Inovecká 3, 3 Poschodie, č.18, Košice 04011 | Phone: 0949-714-143 | Email: 'KatYogaStudio@gmail.com'",
+  "tag-og-title-contact": "Kat Yoga - Contact",
+
+  "i-01a-alt-img-tag-contact": "Katarina Szaboova, Head yoga instructor, demonstrating yoga pose in front of a dark red mandala, hero image at the top of the page",
+  "i-02a-alt-img-tag-contact": "Kat Yoga training studio, map showing the studio's location",
+
+
+
+"_COMMENT_06": "--------------- Error Page -------------",
+  "tag-title-error": "Kat Yoga - Error",
+  "tag-description-error": "Kat Yoga | Sorry, that page does not exist. Please select a page from the navigation menu.",
+  "tag-og-description-error": "Kat Yoga | Sorry, that page does not exist. Please select a page from the navigation menu.",
+  "tag-og-title-error": "Kat Yoga - Error",
+
+  "i-01a-alt-img-tag-error": "Katarina Szaboova, Head yoga instructor, Letter K yoga pose",
+  "i-02a-alt-img-tag-error": "Katarina Szaboova, Head yoga instructor, Letter A yoga pose",
+  "i-03a-alt-img-tag-error": "Katarina Szaboova, Head yoga instructor, Letter T yoga pose"
+
+
+
+
+
+
+
