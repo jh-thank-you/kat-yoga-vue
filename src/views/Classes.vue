@@ -62,12 +62,16 @@ onUnmounted(() => {
             <h2 class="spacer-30">{{ t("h-02a-classes") }}</h2>
             <p class="spacer-15">
               <span class="bold">{{ t("p-02a-contact") }}</span>
-              <a class="paragraph-link" href="“tel:0949-714-143”">0949-714-143</a>
+              <a class="paragraph-link" href="“tel:0949-714-143”"
+                >0949-714-143</a
+              >
             </p>
 
             <p>
               <span class="bold">{{ t("p-03a-contact") }}</span>
-              <a class="paragraph-link" href="mailto:KatYogaStudio@gmail.com">KatYogaStudio@gmail.com</a>
+              <a class="paragraph-link" href="mailto:KatYogaStudio@gmail.com"
+                >KatYogaStudio@gmail.com</a
+              >
             </p>
           </div>
         </div>
@@ -88,6 +92,30 @@ onUnmounted(() => {
             src="/img/img-kat-yoga-class.png"
             :alt="t('i-03a-alt-img-tag-classes')"
           />
+        </div>
+
+        <div class="row">
+          <img
+            class="img-section"
+            src="/img/pdf-yoga-retreat.png"
+            :alt="t('i-03a-alt-img-tag-classes')"
+          />
+          <div class="column-grid cg-03 list-block">
+            <h2>{{ t("h-04a-event") }}</h2>
+            <ul class="list price">
+              <li class="list-item">{{ t("l-04a-event") }}</li>
+              <li class="list-item">{{ t("l-04b-event") }}</li>
+              <li class="list-item">{{ t("l-04c-event") }}</li>
+              <li class="list-item">
+                <a
+                  class="flyer-link"
+                  href="/img/pdf-yoga-retreat.pdf"
+                  download="Yoga-Retreat-PDF"
+                  >{{ t("l-04d-event") }}</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
         <div id="main-content-wrapper-bkg-img-pattern"></div>
       </div>

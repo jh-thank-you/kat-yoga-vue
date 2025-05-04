@@ -1,6 +1,6 @@
 # kat-yoga-vue
 
-This template should help get you started developing with Vue 3 in Vite.
+This template should help get you started developing with Vue 3 in Vite along with i18n for localized translations.
 
 ## Recommended IDE Setup
 
